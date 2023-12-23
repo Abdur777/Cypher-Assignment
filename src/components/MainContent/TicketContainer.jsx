@@ -1,7 +1,7 @@
-export default function TicketContainer(){
-    return <div class="flex flex-col gap-2 pt-[0.8rem] pb-[0.8rem] pr-[1.2rem] pl-[1.2rem] w-[100%] rounded-md shadow-[0px_0px_8px_0px_#0000001a] border-1 border-solid border-sky-500">
+export default function TicketContainer({ ticket }){
+    return <div class="bg-[#ffff] flex flex-col gap-2 py-[0.8rem] px-[1.2rem] w-[100%] rounded-md shadow-[0px_0px_8px_0px_#0000001a] border-1 border-solid border-[#e6e7eb]">
             <div class="flex justify-between items-center w-[100%]">
-                <span>CAM-10</span>
+                <span>{ticket.id}</span>
                 </div>
                 <div class="flex items-start gap-[5px]">
                     <div>
@@ -21,7 +21,7 @@ export default function TicketContainer(){
                             <path d="M12 3l0 .01"></path>
                             </svg>
                             </div>
-                            <p>Conduct Security Vulnerability Assessment</p>
+                            <p>{ticket.title}</p>
                             </div>
                             <div class="flex items-center gap-[0.5rem] mt-[3px]">
                                 <div class="border-1 border-solid border-sky-500 rounded-[3px] p-[2px]">
@@ -37,7 +37,7 @@ export default function TicketContainer(){
                                                         <path d="M232,128A104,104,0,1,1,128,24,104.13,104.13,0,0,1,232,128Z"></path>
                                                         </svg>
                                                         </div>
-                                                        <span>Feature Request</span>
+                                                        <span>{ticket.tag}</span>
                                                         </div>
                                                         </div>
                                                         </div>

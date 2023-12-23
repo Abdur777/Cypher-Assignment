@@ -1,4 +1,4 @@
-export default function ContainerMain(){
+export default function ContainerMain(props){
     return <div class="flex justify-between items-center h-[8vh] pl-[0.4rem] pr-[0.4rem]">
         <div class="flex gap-[7px] justify-between items-center">
             <div class="flex items-center">
@@ -14,7 +14,7 @@ export default function ContainerMain(){
                     </svg>
                 </div>
             </div>
-            <span>Backlog</span>
+            <span>{props.title}</span>
             <span>2</span>
         </div>
         <div class="flex gap-[6px] justify-between items-center">

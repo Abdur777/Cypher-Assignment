@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
+import { useAppContext } from '@/contexts/AppContext';
 
 export default function Button() {
+  const { dispatch } = useAppContext();
   const [isDropdownVisible, setDropdownVisibility] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownVisibility(!isDropdownVisible);
+  };
+
+  const handleGroupingChange = (value) => {
+    dispatch({ type: 'SET_GROUPING', payload: value });
+    setDropdownVisibility(false);
+  };
+
+  const handleSortingChange = (value) => {
+    dispatch({ type: 'SET_SORTING', payload: value });
+    setDropdownVisibility(false);
   };
 
   return (
@@ -55,7 +67,8 @@ export default function Button() {
       >
         <div className="flex items-center gap-20 justify-between text-base">
           <span class="text-[#8D8D8D]">Grouping</span>
-          <select class="capitalize cursor-pointer text-base pr-[2rem] pl-2 py-[0.2rem] rounded-md border border-solid border-[#e6e7eb]">
+          <select class="capitalize cursor-pointer text-base pr-[2rem] pl-2 py-[0.2rem] rounded-md border border-solid border-[#e6e7eb]"
+          onChange={(e) => handleGroupingChange(e.target.value)}>
             <option value="status">status</option>
             <option value="user">user</option>
             <option value="priority">priority</option>
@@ -63,7 +76,8 @@ export default function Button() {
         </div>
         <div className="flex items-center gap-20 justify-between text-base">
           <span class="text-[#8D8D8D]">Ordering</span>
-          <select name="ordering" class="capitalize cursor-pointer text-base pr-[2rem] pl-2 py-[0.2rem] rounded-md border border-solid border-[#e6e7eb]">
+          <select name="ordering" class="capitalize cursor-pointer text-base pr-[2rem] pl-2 py-[0.2rem] rounded-md border border-solid border-[#e6e7eb]" 
+          onChange={(e) => handleSortingChange(e.target.value)}>
             <option value="priority">Priority</option>
             <option value="title">Title</option>
           </select>
