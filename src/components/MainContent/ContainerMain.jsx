@@ -15,7 +15,7 @@ export default function ContainerMain(props){
                 </div>
             </div>
             <span>{props.title}</span>
-            <span>2</span>
+            <span>{props.count}</span>
         </div>
         <div class="flex gap-[6px] justify-between items-center">
             <div>

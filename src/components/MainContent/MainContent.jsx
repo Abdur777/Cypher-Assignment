@@ -142,7 +142,7 @@ const sortByPriority = (tickets) => {
       <section className="grid grid-cols-5 gap-[15px] pt-2.5 pb-2.5 ml-[21.594px] mr-[21.609px] min-h-[92vh] box-border scroll-smooth">
         {Object.entries(getFilteredAndSortedTickets()).map(([group, tickets]) => (
           <div key={group}>
-            <ContainerMain title={group} />
+            <ContainerMain title={group} count={tickets.length} />
             <div className="flex flex-col gap-[0.5rem]">
               {tickets.map((ticket) => (
                 <TicketContainer key={ticket.id} ticket={ticket} />
