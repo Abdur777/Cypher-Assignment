@@ -5,7 +5,7 @@ import TopBar from "@/components/TopBar/TopBar";
 
 export default function Home() {
   return (
-    <div>
+    <div class="m-0 p-0">
      <TopBar/>
      <MainContent/>
     </div>
