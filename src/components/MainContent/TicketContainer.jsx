@@ -1,7 +1,7 @@
 export default function TicketContainer({ ticket }){
-    return <div class="bg-[#ffff] flex flex-col gap-2 py-[0.8rem] px-[1.2rem] w-[100%] rounded-md shadow-[0px_0px_8px_0px_#0000001a] border-1 border-solid border-[#e6e7eb]">
+    return <div class="bg-[#ffff] flex flex-col gap-2 py-[0.8rem] px-[1.2rem] w-[100%] rounded-md shadow-[0px_0px_8px_0px_#0000001a] border-[1px] border-solid border-[#e6e7eb]">
             <div class="flex justify-between items-center w-[100%]">
-                <span>{ticket.id}</span>
+                <span class="text-[1rem] text-[#8D8D8D]">{ticket.id}</span>
                 </div>
                 <div class="flex items-start gap-[5px]">
                     <div>
@@ -21,26 +21,27 @@ export default function TicketContainer({ ticket }){
                             <path d="M12 3l0 .01"></path>
                             </svg>
                             </div>
-                            <p>{ticket.title}</p>
+                            <p class="text-[1rem] text-[#373737] font-medium leading-[102%]">{ticket.title}</p>
                             </div>
-                            <div class="flex items-center gap-[0.5rem] mt-[3px]">
-                                <div class="border-1 border-solid border-sky-500 rounded-[3px] p-[2px]">
-                                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 20h.01"></path>
-                                        <path d="M7 20v-4"></path>
-                                        </svg>
-                                        </div>
-                                        <div class="pt-2 pb-2">
-                                            <div class="flex gap-[5px] items-center border-1 border-solid border-sky-500 rounded-[3px] pt-1px pb-1px pr-5 pl-5">
-                                                <div>
-                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M232,128A104,104,0,1,1,128,24,104.13,104.13,0,0,1,232,128Z"></path>
-                                                        </svg>
-                                                        </div>
-                                                        <span>{ticket.tag}</span>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
+                            <div class="flex items-center gap-2 mt-[3px]">
+                            <div class="border-[1px] border-solid border-[#e6e7eb] rounded-[3px] p-[2px]">
+                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 20h.01"></path>
+                                    <path d="M7 20v-4"></path>
+                                    <path d="M12 20v-8"></path>
+                                    </svg>
+                                    </div>
+                                <div class="text-[0.85rem] py-[1px] px-[0px]">
+                                    <div class="flex gap-[5px] items-center border-[1px] border-solid border-[#e6e7eb] rounded-[3px] py-[1px] px-[5px]">
+                                        <div>
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M232,128A104,104,0,1,1,128,24,104.13,104.13,0,0,1,232,128Z"></path>
+                                            </svg>
+                                            </div>
+                                            <span class="text-[0.85rem] text-[#8D8D8D]">{ticket.tag}</span>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
                                                         
 }
